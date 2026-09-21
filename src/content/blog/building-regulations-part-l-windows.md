@@ -9,8 +9,6 @@ readingTime: 7
 heroKeyword: "building regs part l windows"
 ---
 
-# Building Regs Part L 2021: What Window Replacements Must Meet
-
 Replacing your windows is a notifiable building work in England, Wales and Scotland, and the rules changed materially with the 2021 update to Part L. This piece sets out what you now have to meet, how self-certification actually works, and what happens if a previous installer skipped the paperwork on a property you now own.
 
 ## What Part L 2021 changed for replacement windows

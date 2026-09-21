@@ -9,8 +9,6 @@ readingTime: 7
 heroKeyword: "upvc window cost 2026"
 ---
 
-# UPVC Window Costs 2026: What UK Homeowners Actually Pay
-
 UPVC replacement costs have shifted again this year, and the gap between a headline quote and a final invoice can be wider than most homeowners expect. This guide sets out realistic 2026 UK prices for the three main UPVC window styles, what actually drives the number on your quote, and the extras that quietly appear later. Read it before you sign anything.
 
 ## What a single UPVC window costs in 2026

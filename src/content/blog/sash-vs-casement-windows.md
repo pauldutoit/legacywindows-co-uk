@@ -9,8 +9,6 @@ readingTime: 8
 heroKeyword: "sash vs casement windows"
 ---
 
-# Sash vs Casement Windows: Which Is Right for Your UK Home?
-
 Sashes and casements are the two window archetypes of British housing, and the choice between them is rarely about which is objectively better. It is about what suits the age of the house, the way the room is used, the budget available and the rules that apply to the elevation. This guide sets out what actually separates the two.
 
 ## A short history of each style in the UK

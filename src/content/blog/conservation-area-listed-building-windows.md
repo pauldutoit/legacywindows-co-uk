@@ -9,8 +9,6 @@ readingTime: 8
 heroKeyword: "conservation area windows"
 ---
 
-# Windows in Conservation Areas and Listed Buildings: UK Guide
-
 Replacing windows on a period property in the UK is rarely a purely commercial decision. Conservation area rules, Article 4 Directions and Listed Building Consent can all apply, sometimes together, and getting the sequence wrong can cost you a refusal and enforcement action. This guide sets out how each regulatory layer works and what your compliant options actually are.
 
 ## The three regulatory layers, and how they stack

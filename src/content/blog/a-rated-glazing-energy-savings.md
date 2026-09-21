@@ -9,8 +9,6 @@ readingTime: 7
 heroKeyword: "a rated windows energy savings"
 ---
 
-# A+ Rated Windows: What They Save on Your Heating Bill
-
 Energy labels on windows look reassuringly like the ones on fridges, but the number they translate to on your gas bill is less obvious. This guide explains what a Window Energy Rating actually measures, what Building Regulations Part L 2021 now demands, and what UK homeowners can realistically expect A+ glazing to save each year in 2026.
 
 ## What the Window Energy Rating actually measures
