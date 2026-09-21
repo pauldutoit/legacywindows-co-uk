@@ -17,8 +17,8 @@
   "legalName": "Your Site Name",
   "legalAddress": "",
   "_contentNotice": "Placeholder content. Replace siteName/domain/niche/tagline/testimonials/faq before deploying to production. Testimonials and stats below are illustrative examples for design preview, not confirmed facts.",
-  "matomoUrl": "",
-  "matomoSiteId": "",
+  "matomoUrl": "//analytics.webfocus.fr/",
+  "matomoSiteId": "21",
   "clarityId": "",
   "aggregateRating": {
     "value": 4.8,
