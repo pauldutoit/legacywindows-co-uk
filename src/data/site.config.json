@@ -16,7 +16,6 @@
   "locale": "en-GB",
   "legalName": "Legacy Windows",
   "legalAddress": "",
-  "_contentNotice": "Testimonials and stats are placeholder wording pending real customer feedback - replace before running paid traffic. Aggregate rating removed until real reviews are collected.",
   "matomoUrl": "//analytics.webfocus.fr/",
   "matomoSiteId": "21",
   "clarityId": "",
@@ -38,26 +37,6 @@
     {
       "title": "Compare and choose",
       "description": "Pick the quote that fits your budget and timeline - or walk away. There's no commitment either way."
-    }
-  ],
-  "testimonials": [
-    {
-      "name": "PLACEHOLDER - replace before launch",
-      "location": "Leeds",
-      "quote": "Replace this with a genuine customer quote before going live - never invent reviews.",
-      "rating": 5
-    },
-    {
-      "name": "PLACEHOLDER - replace before launch",
-      "location": "Bristol",
-      "quote": "Replace this with a genuine customer quote before going live - never invent reviews.",
-      "rating": 5
-    },
-    {
-      "name": "PLACEHOLDER - replace before launch",
-      "location": "Nottingham",
-      "quote": "Replace this with a genuine customer quote before going live - never invent reviews.",
-      "rating": 5
     }
   ],
   "faq": [

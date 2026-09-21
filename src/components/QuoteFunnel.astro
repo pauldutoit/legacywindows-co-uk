@@ -112,7 +112,8 @@ const formId = `quote-funnel${idSuffix ? `-${idSuffix}` : ''}`;
       <legend><h2>Where is the property?</h2></legend>
       <div class="form-group">
         <label for={`address-${formId}`}>Address (house number &amp; street)</label>
-        <input type="text" id={`address-${formId}`} name="address_line1" placeholder="e.g. 14 High Street" required />
+        <input type="text" id={`address-${formId}`} name="address_line1" placeholder="e.g. 14 High Street" required pattern="^\d.+" title="Please include your house number followed by the street name (e.g. 14 High Street)" />
+        <span class="field-hint">Include your house number and street - installers need it to route the quote.</span>
       </div>
       <div class="form-group">
         <label for={`postcode-${formId}`}>Postcode</label>
@@ -256,6 +257,11 @@ const formId = `quote-funnel${idSuffix ? `-${idSuffix}` : ''}`;
             el.focus();
             return false;
           }
+        } else if (el.type === 'checkbox') {
+          if (!el.checked) {
+            el.focus();
+            return false;
+          }
         } else if (!el.value) {
           el.focus();
           return false;
@@ -264,6 +270,14 @@ const formId = `quote-funnel${idSuffix ? `-${idSuffix}` : ''}`;
         if (el.tagName === 'TEXTAREA' && el.minLength && el.value.trim().length < el.minLength) {
           el.focus();
           return false;
+        }
+        // Address pattern check (e.g. must start with a digit)
+        if (el.pattern && el.value) {
+          const re = new RegExp(el.pattern);
+          if (!re.test(el.value)) {
+            el.focus();
+            return false;
+          }
         }
       }
       return checkDisqualifier(step);
@@ -309,17 +323,43 @@ const formId = `quote-funnel${idSuffix ? `-${idSuffix}` : ''}`;
       if (submitBtn) submitBtn.disabled = true;
       if (status) { status.textContent = 'Sending...'; status.dataset.state = ''; }
 
+      const ERROR_MESSAGES = {
+        missing_fields: 'Please fill in your name, phone and email.',
+        invalid_email: 'That email address looks off - please check it.',
+        invalid_phone: 'Please enter a valid UK phone number (07... or +44...).',
+        invalid_postcode: 'That postcode does not look right - please check it.',
+        address_required: 'Please add your house number and street.',
+        message_required: 'A short project brief (at least 15 characters) is required.',
+        consent_required: 'Please tick the consent box so we can share your brief with installers.',
+        homeowner_only: 'We can only match homeowners with installers - please have the owner submit the request.',
+        out_of_scope_timeframe: 'We only match projects starting within the next 6 months.',
+        service_required: 'Please pick the service you need.',
+        unit_count_required: 'Please tell us how many units you need.',
+        property_type_required: 'Please pick your property type.',
+        turnstile_failed: 'The security check failed - please tick "I am human" and try again.',
+        rate_limited: 'Too many requests from your address - please try again in an hour.',
+        email_failed: 'Our email service is temporarily unavailable - please try again in a few minutes.',
+        invalid_json: 'Something went wrong reading the form - please try again.',
+      };
+
       try {
         const res = await fetch('/api/lead', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload),
         });
-        if (!res.ok) throw new Error('request failed');
+        let data = {};
+        try { data = await res.json(); } catch {}
+        if (!res.ok) {
+          const msg = (data && data.error && ERROR_MESSAGES[data.error]) || 'Something went wrong, please try again in a moment.';
+          if (status) { status.textContent = msg; status.dataset.state = 'error'; }
+          if (submitBtn) submitBtn.disabled = false;
+          return;
+        }
         form.reset();
         window.location.href = '/thank-you';
       } catch (err) {
-        if (status) { status.textContent = 'Something went wrong, please try again in a moment.'; status.dataset.state = 'error'; }
+        if (status) { status.textContent = 'Network error - please check your connection and try again.'; status.dataset.state = 'error'; }
         if (submitBtn) submitBtn.disabled = false;
       }
     });
