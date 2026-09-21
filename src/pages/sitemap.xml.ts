@@ -6,11 +6,14 @@ import intents from '../data/intents.json';
 export const GET: APIRoute = async () => {
   const entries = await getCollection('cityContent');
   const indexableEntries = entries.filter((e) => e.data.indexable);
+  const blogPosts = await getCollection('blog');
 
   const staticUrls = [
     '/',
     '/areas',
+    '/blog/',
     ...intents.map((i) => `/services/${i.slug}/`),
+    ...blogPosts.map((p) => `/blog/${p.data.slug}/`),
   ];
 
   const urls = [

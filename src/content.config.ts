@@ -17,4 +17,23 @@ const cityContent = defineCollection({
   }),
 });
 
-export const collections = { cityContent };
+const blog = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/blog' }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    slug: z.string(),
+    publishDate: z.string(),
+    author: z.string().default('Legacy Windows editorial'),
+    category: z.enum([
+      'Cost & Quotes',
+      'Energy & Regulations',
+      'Product Comparison',
+      'Period Properties',
+    ]),
+    readingTime: z.number().int().positive(),
+    heroKeyword: z.string(),
+  }),
+});
+
+export const collections = { cityContent, blog };

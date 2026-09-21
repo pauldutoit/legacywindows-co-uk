@@ -1,0 +1,83 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import siteConfig from '../../data/site.config.json';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog'))
+  .sort((a, b) => (a.data.publishDate < b.data.publishDate ? 1 : -1));
+
+const siteOrigin = `https://${siteConfig.domain}`;
+const metaTitle = `Blog | ${siteConfig.siteName}`;
+const metaDescription = `Homeowner guides on UK window costs, Building Regulations, sash vs casement and conservation-area rules - written for people about to spend £5,000+.`;
+
+const blogSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Blog',
+  name: `${siteConfig.siteName} Blog`,
+  url: `${siteOrigin}/blog/`,
+  publisher: { '@type': 'Organization', name: siteConfig.siteName },
+  blogPost: posts.map((p) => ({
+    '@type': 'BlogPosting',
+    headline: p.data.title,
+    datePublished: p.data.publishDate,
+    url: `${siteOrigin}/blog/${p.data.slug}/`,
+    description: p.data.description,
+  })),
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: `${siteOrigin}/` },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: `${siteOrigin}/blog/` },
+  ],
+};
+---
+
+<BaseLayout title={metaTitle} description={metaDescription}>
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(blogSchema)} />
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <div class="container" style="padding-top: 1.5rem;">
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">Home</a> / Blog
+    </nav>
+
+    <header class="blog-header">
+      <h1>Homeowner guides &amp; window explainers</h1>
+      <p class="lede">Independent guides for UK homeowners about to replace their windows or doors. Regulations, cost benchmarks and product comparisons - no marketing filler.</p>
+    </header>
+
+    <ul class="blog-list">
+      {posts.map((p) => (
+        <li class="blog-card">
+          <a href={`/blog/${p.data.slug}/`}>
+            <span class="blog-cat">{p.data.category}</span>
+            <h2>{p.data.title}</h2>
+            <p>{p.data.description}</p>
+            <span class="blog-meta">
+              <time datetime={p.data.publishDate}>{new Date(p.data.publishDate).toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+              <span aria-hidden="true"> &middot; </span>
+              <span>{p.data.readingTime} min read</span>
+            </span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</BaseLayout>
+
+<style>
+  .blog-header { margin: 1rem 0 2rem; }
+  .blog-header h1 { margin-bottom: 0.5rem; }
+  .blog-header .lede { color: var(--color-muted); font-size: 1.05rem; max-width: 640px; }
+  .blog-list { list-style: none; padding: 0; margin: 0 0 3rem; display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
+  .blog-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); overflow: hidden; transition: box-shadow .18s, transform .18s; }
+  .blog-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,.08); transform: translateY(-2px); }
+  .blog-card a { display: block; padding: 1.25rem 1.35rem; color: inherit; text-decoration: none; }
+  .blog-cat { display: inline-block; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--color-primary); margin-bottom: 0.5rem; }
+  .blog-card h2 { font-size: 1.15rem; margin: 0 0 0.5rem; line-height: 1.35; }
+  .blog-card p { font-size: 0.95rem; color: var(--color-muted); margin: 0 0 0.75rem; line-height: 1.5; }
+  .blog-meta { font-size: 0.82rem; color: var(--color-muted); }
+</style>

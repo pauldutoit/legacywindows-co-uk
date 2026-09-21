@@ -1,29 +1,47 @@
 [
   {
-    "slug": "service-one",
-    "label": "Service One",
-    "shortLabel": "Service One",
-    "searchIntent": "PLACEHOLDER - describe what the searcher wants for this service, e.g. 'someone wants new casement windows and is comparing quotes'",
+    "slug": "upvc-windows",
+    "label": "UPVC double glazed windows",
+    "shortLabel": "UPVC windows",
+    "searchIntent": "homeowner replacing tired or draughty windows with modern A-rated UPVC double glazing, comparing per-window and whole-house quotes",
+    "priceFrom": "From £450",
+    "basePriceRange": [450, 900],
+    "icon": "🪟"
+  },
+  {
+    "slug": "sash-windows",
+    "label": "Sash windows (UPVC & timber)",
+    "shortLabel": "Sash windows",
+    "searchIntent": "owner of a Victorian, Edwardian or period property replacing rotten timber sashes or fitting UPVC vertical sliders that keep the traditional look",
+    "priceFrom": "From £900",
+    "basePriceRange": [900, 2400],
+    "icon": "🏛️"
+  },
+  {
+    "slug": "french-doors",
+    "label": "French & patio doors",
+    "shortLabel": "French doors",
+    "searchIntent": "homeowner opening up onto a garden with double french doors or sliding patio doors, comparing UPVC and aluminium options",
+    "priceFrom": "From £1,300",
+    "basePriceRange": [1300, 3200],
+    "icon": "🚪"
+  },
+  {
+    "slug": "bay-windows",
+    "label": "Bay & bow windows",
+    "shortLabel": "Bay windows",
+    "searchIntent": "owner of a semi or terrace replacing a front bay window - three or five panel, with structural support considerations",
+    "priceFrom": "From £1,600",
+    "basePriceRange": [1600, 3800],
+    "icon": "🏘️"
+  },
+  {
+    "slug": "secondary-glazing",
+    "label": "Secondary glazing",
+    "shortLabel": "Secondary glazing",
+    "searchIntent": "owner of a listed building or conservation-area property who cannot replace original windows and needs a compliant thermal + acoustic upgrade",
     "priceFrom": "From £350",
-    "basePriceRange": [350, 900],
-    "icon": "🔨"
-  },
-  {
-    "slug": "service-two",
-    "label": "Service Two",
-    "shortLabel": "Service Two",
-    "searchIntent": "PLACEHOLDER - describe what the searcher wants for this service",
-    "priceFrom": "From £600",
-    "basePriceRange": [600, 1200],
-    "icon": "🏠"
-  },
-  {
-    "slug": "service-three",
-    "label": "Service Three",
-    "shortLabel": "Service Three",
-    "searchIntent": "PLACEHOLDER - describe what the searcher wants for this service",
-    "priceFrom": "From £89",
-    "basePriceRange": [89, 250],
-    "icon": "🔧"
+    "basePriceRange": [350, 950],
+    "icon": "🔇"
   }
 ]

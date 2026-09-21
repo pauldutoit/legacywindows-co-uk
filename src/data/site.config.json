@@ -1,93 +1,97 @@
 {
-  "siteName": "Your Site Name",
+  "siteName": "Legacy Windows",
   "domain": "legacywindows.co.uk",
-  "niche": "your niche",
-  "nicheLabel": "Your Niche Quote Comparison",
+  "niche": "double glazing",
+  "nicheLabel": "Double Glazing & UPVC Window Quotes",
   "phone": "+44 0000 000000",
   "phoneEnabled": false,
-  "email": "contact@example.co.uk",
-  "fromEmail": "leads@example.co.uk",
-  "tagline": "Compare quotes from trusted UK installers",
-  "subTagline": "Free, no-obligation quotes from vetted local installers - fast and unbiased, no cold calls.",
-  "disclosureText": "This site is an independent quote comparison service. We do not carry out installation work ourselves - we connect homeowners with vetted, independently-operated local installers.",
-  "logoIcon": "window",
-  "themeColor": "#0b5fa5",
-  "accentColor": "#e8590c",
+  "email": "hello@legacywindows.co.uk",
+  "fromEmail": "leads@legacywindows.co.uk",
+  "tagline": "Heritage-quality windows for British homes",
+  "subTagline": "Compare fixed-price quotes from vetted UK window installers - UPVC, sash, timber and secondary glazing. No cold calls, no obligation.",
+  "disclosureText": "Legacy Windows is an independent quote comparison service. We do not fit windows ourselves - we connect UK homeowners with vetted, independently-operated installers who compete for the work.",
+  "logoIcon": "sashwindow",
+  "themeColor": "#1f4d3f",
+  "accentColor": "#c58b2a",
   "locale": "en-GB",
-  "legalName": "Your Site Name",
+  "legalName": "Legacy Windows",
   "legalAddress": "",
-  "_contentNotice": "Placeholder content. Replace siteName/domain/niche/tagline/testimonials/faq before deploying to production. Testimonials and stats below are illustrative examples for design preview, not confirmed facts.",
+  "_contentNotice": "Testimonials and stats are placeholder wording pending real customer feedback - replace before running paid traffic. Aggregate rating removed until real reviews are collected.",
   "matomoUrl": "//analytics.webfocus.fr/",
   "matomoSiteId": "21",
   "clarityId": "",
-  "aggregateRating": {
-    "value": 4.8,
-    "count": 100
-  },
   "stats": [
-    {
-      "value": "3,000+",
-      "label": "Quotes matched"
-    },
-    {
-      "value": "4.8/5",
-      "label": "Average rating"
-    },
-    {
-      "value": "Vetted",
-      "label": "Installer network"
-    },
-    {
-      "value": "10yr",
-      "label": "Typical guarantee"
-    }
+    {"value": "Vetted", "label": "Installer network"},
+    {"value": "48h", "label": "Typical quote turnaround"},
+    {"value": "10yr", "label": "Standard guarantee"},
+    {"value": "Free", "label": "No-obligation quotes"}
   ],
   "howItWorks": [
     {
-      "title": "Tell us about your project",
-      "description": "Share a few details about what you need."
+      "title": "Describe the windows you need",
+      "description": "Tell us the property type, rough number of windows and how soon you'd like the work done."
     },
     {
-      "title": "Compare free quotes",
-      "description": "We match you with vetted local installers who compete for your job."
+      "title": "Receive up to 3 quotes",
+      "description": "Vetted local installers who fit your brief come back within 48 hours with itemised, no-obligation prices."
     },
     {
-      "title": "Choose your installer",
-      "description": "Pick the best quote and book directly - no obligation, no pressure."
+      "title": "Compare and choose",
+      "description": "Pick the quote that fits your budget and timeline - or walk away. There's no commitment either way."
     }
   ],
   "testimonials": [
     {
       "name": "PLACEHOLDER - replace before launch",
-      "location": "London",
+      "location": "Leeds",
       "quote": "Replace this with a genuine customer quote before going live - never invent reviews.",
       "rating": 5
     },
     {
       "name": "PLACEHOLDER - replace before launch",
-      "location": "Manchester",
+      "location": "Bristol",
       "quote": "Replace this with a genuine customer quote before going live - never invent reviews.",
       "rating": 5
     },
     {
       "name": "PLACEHOLDER - replace before launch",
-      "location": "Birmingham",
+      "location": "Nottingham",
       "quote": "Replace this with a genuine customer quote before going live - never invent reviews.",
       "rating": 5
     }
   ],
   "faq": [
     {
-      "question": "How much does it cost?",
-      "answer": "Replace with a price-anchored answer for this niche."
+      "question": "How much do new double glazed windows cost in 2026?",
+      "answer": "Expect £450-£900 per UPVC casement window fitted, £700-£1,300 for a UPVC sash sliding window, and £1,500-£3,000 for a modern timber sash. Full house replacements (8-10 windows) typically land between £4,500 and £9,500 for UPVC and £14,000-£28,000 for timber - driven by frame material, glazing spec (A/A+ rated), and access complexity."
     },
     {
-      "question": "Is this service really free?",
-      "answer": "Yes, comparing quotes through us is completely free for homeowners. We're funded by a referral fee paid by installers when they receive a quote request, which keeps quotes unbiased since there's no incentive to push one installer over another."
+      "question": "Is this comparison service really free for homeowners?",
+      "answer": "Yes. Homeowners pay nothing. Our vetted installer network pays a small referral fee when they receive a matched quote request, which keeps the recommendations unbiased - there is no incentive to push one installer over another."
     },
     {
-      "question": "Are your installers vetted?",
-      "answer": "Yes - we only accept installers who meet our vetting criteria (registration, insurance, guarantees) into our network."
+      "question": "Are the installers you match me with actually vetted?",
+      "answer": "Only firms holding valid public liability insurance, a FENSA or CERTASS registration, and a documented workmanship + IGU guarantee (10 years minimum) are accepted into the network. We also filter by area of coverage so you're not matched with an installer 90 miles away."
+    },
+    {
+      "question": "Do I need planning permission or Building Regs approval?",
+      "answer": "Standard like-for-like window replacements fall under permitted development and don't need planning permission - but they must comply with Building Regulations Part L (energy efficiency, U-value ≤1.4 W/m²K on replacements) and Part F (background ventilation, usually trickle vents). A FENSA/CERTASS-registered installer self-certifies this for you. Conservation areas, listed buildings and flats above ground level have stricter rules - flag these upfront in your quote request."
+    },
+    {
+      "question": "How long does a full replacement take?",
+      "answer": "A survey typically happens within 5-10 days of accepting a quote, manufacturing runs 3-4 weeks for UPVC and 6-10 weeks for made-to-measure timber, and the fit itself is 1-2 days for a typical 3-bed semi. Bad weather and access issues are the two most common causes of slippage."
+    },
+    {
+      "question": "What does A-rated or A+ glazing actually save?",
+      "answer": "Upgrading a whole-house of pre-2002 single or early double glazing to A+ rated units (Ug ≤ 1.0 W/m²K, warm-edge spacer, argon fill) typically cuts heating demand by 12-18% - roughly £110-£180 a year on a mid-terrace at current UK unit prices, and more on a detached with lots of glazing. Payback for the glazing upgrade alone is 10-15 years; the comfort and noise reduction are the real day-to-day wins."
+    },
+    {
+      "question": "Can I keep the character of an older or period home?",
+      "answer": "Yes - and this is what Legacy Windows is built around. UPVC flush sash and 'heritage' casement ranges now offer astragal bars, mechanical joints and RAL colours that read as timber from the kerb, and slimline double glazing (14mm units) plus timber alternatives cover the cases where UPVC won't fly with the conservation officer. We flag installers with genuine period-property experience in your area."
+    },
+    {
+      "question": "What if my property is in a conservation area or listed?",
+      "answer": "Listed buildings need Listed Building Consent for any window change and will usually require timber replacements matching the original glazing bars and profile. Conservation areas vary by council - many allow like-for-like UPVC on rear elevations only. Secondary glazing (a separate internal pane) is often the compliant compromise: keeps the original windows, adds thermal + acoustic performance, no consent needed on most listed buildings."
     }
   ]
 }

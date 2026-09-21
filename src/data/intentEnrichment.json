@@ -1,17 +1,73 @@
 {
-  "_note": "Per-service enrichment used on /services/{intent}/ hubs. Keyed by intent slug. Fill in with hubIntro, hubBody[], hubTips[], commonSpecs for each service in intents.json - each hub must read genuinely differently from the others (no spun templates, no crc32). Missing intent = the hub falls back to a generic intro.",
-  "service-one": {
-    "hubIntro": "PLACEHOLDER intro for this service - one paragraph explaining what it is and when a UK homeowner needs it. Replace before launch.",
+  "_note": "Per-service enrichment used on /services/{intent}/ hubs. Each hub reads distinctly - do not spin. Prices are UK 2026 mid-market for a fitted job, ex-VAT.",
+  "upvc-windows": {
+    "hubIntro": "UPVC double glazed windows are still the default choice for the majority of UK homeowners - they hit the sweet spot between price, thermal performance and low maintenance. A properly specified A+ rated UPVC casement now delivers a whole-window U-value below 1.2 W/m²K, well inside the current Building Regulations Part L threshold, and modern flush-sash and heritage profiles finally look at home on Victorian and Edwardian stock rather than fighting it.",
     "hubBody": [
-      "PLACEHOLDER first body paragraph - price drivers, materials, spec choices.",
-      "PLACEHOLDER second body paragraph - installation process, timelines, what makes a good vs bad quote."
+      "Prices are driven by three things: the frame (60mm chambered UPVC vs. 70mm+ triple-chamber, standard white vs. RAL foil or woodgrain, single vs. double gasket), the glazing unit (28mm double A-rated as a baseline, 44mm triple for £120-£180 extra per m², warm-edge spacers, argon or krypton fill), and how the window opens - fixed panes are cheaper, tilt-and-turn or fully reversible sashes carry a hardware premium. A mid-range A-rated casement in white typically lands at £450-£650 fitted per opening; upgrade to A+, anthracite grey foil and Yale multi-point locks and you're closer to £700-£900.",
+      "Fitting is normally a one-to-two day job for an average three-bed semi, including cill trims, silicone perimeter seal, trickle vents (required for Building Regs Part F on almost all replacements) and post-fit inspection. A FENSA or CERTASS registered installer will self-certify to Building Control - keep that certificate with your deeds, it's what conveyancing solicitors ask for. The two biggest cost traps are non-standard sizes on original 1930s bays and hidden lintel repairs behind pebbledash: a decent surveyor flags both before the quote is issued, not on fitting day."
     ],
     "hubTips": [
-      "PLACEHOLDER tip 1 - practical thing to check before signing.",
-      "PLACEHOLDER tip 2.",
-      "PLACEHOLDER tip 3.",
-      "PLACEHOLDER tip 4."
+      "Insist on the whole-window energy rating (WER) A or A+ and the certified Ug value on the glazing spec sheet - a lot of £399/window offers quietly ship a C or D rating.",
+      "Check the guarantee covers the sealed unit (10-year IGU minimum), the hardware (5-10 years) AND the installation workmanship separately - three overlapping guarantees, not one vague 'lifetime' promise.",
+      "Trickle vents are compulsory on replacement windows under Part F unless you have equivalent background ventilation elsewhere - installers who quote without them are cutting a corner you'll pay for at re-sale.",
+      "For rear elevations of a pre-1960s house, ask specifically about a 'flush sash' UPVC profile - the frame sits flush with the outer face rather than protruding, which reads much closer to the original timber the house was designed with."
     ],
-    "commonSpecs": "PLACEHOLDER standard spec sheet - the typical bill of materials a decent installer will quote for this service."
+    "commonSpecs": "Standard mid-market spec: 70mm 6-chamber UPVC frame, A-rated whole-window (Uw ≤ 1.4 W/m²K), 28mm sealed unit with warm-edge spacer bar and argon fill, low-E soft coat inner pane, Yale or Roto multi-point locking, internal glazed for security, external cill trim, trickle vents to Part F, FENSA/CERTASS certificate on completion, 10-year IGU + 10-year workmanship."
+  },
+  "sash-windows": {
+    "hubIntro": "Sash windows are the defining feature of Georgian, Victorian and Edwardian houses across the UK - and the wrong replacement is the fastest way to strip £15,000 off a period property's value. There are three routes: full timber sash reproduction (correct for listed buildings and most conservation areas), engineered timber-alu composites, and modern UPVC vertical sliders that ape the original section from twenty feet away. Which one is right depends less on your budget than on your property's status and your planning officer.",
+    "hubBody": [
+      "A pair of hand-made sliding sash timber windows in accoya or engineered redwood, with slim double-glazed units (14-16mm), traditional cords and weights, and a run of astragal bars typically runs £1,800-£3,200 per window fitted - more on tall Georgian openings above 2.2m. UPVC vertical sliders with mechanical joints, deep-bottom rails and RAL 7016 foil colouring cover the same visual brief at £900-£1,400 per window, but no conservation officer will accept them on a Grade II listed front elevation. Aluminium-clad timber sits in between at £1,600-£2,400 and combines the outward look of timber with much lower maintenance.",
+      "Rot repair vs. replace is the recurring question on Victorian and Edwardian properties. If the outer cills, pulley stiles or sash sides have gone but the box frame is sound, a specialist joiner can splice new sections, replace parting beads and re-cord for £600-£1,200 per window - roughly a third of a full replacement, and the only compliant option on a listed building. Get an honest survey before you commit either way: an installer who quotes replacement without opening the beading and probing the timber is quoting on hope."
+    ],
+    "hubTips": [
+      "If the property is listed you need Listed Building Consent before ANY work - even like-for-like timber replacement. UPVC is almost never approved. Talk to the council's Conservation Officer before you take quotes.",
+      "In a conservation area, front elevations usually require timber; rear can sometimes take UPVC. Ask the council whether an Article 4 Direction is in force - if it is, permitted development rights have been withdrawn and even rear elevations need permission.",
+      "Slimline double glazing (14mm units with warm-edge spacers) is the compromise that fits period sash profiles - a 28mm unit won't seat inside a proper Victorian sash without butchering the profile.",
+      "For UPVC sliders, insist on 'mechanical joints' rather than welded corners on visible faces - welded corners are the giveaway that reads as plastic from the pavement."
+    ],
+    "commonSpecs": "Timber sash spec: engineered redwood or accoya frame, factory-primed and finished, traditional weight-and-pulley or spring balance, 14-16mm slimline double glazing (Ug ≤ 1.4 W/m²K), warm-edge spacer, restrictor hardware to comply with Approved Document K on upper floors, decorated externally and internally in customer colour, 30-year timber guarantee + 10-year sealed unit."
+  },
+  "french-doors": {
+    "hubIntro": "French doors and sliding patio doors are the second-most-requested opening on a UK window replacement job, and the specifications people worry about first - security, thermal performance, threshold height - are the ones that differ most between products. A 1.8m UPVC french door set is typically £1,300-£1,800 fitted; the same opening in aluminium is £2,400-£3,400; a full three-panel sliding aluminium patio at 3.6m sits at £3,800-£6,500 depending on glass spec.",
+    "hubBody": [
+      "The two biggest technical decisions are the threshold and the locking. A standard rebated threshold is 45-70mm high and the compliant choice under Approved Document M is a 15mm 'low-profile' or level-access threshold - essential if you're extending a ground floor for accessibility or resale. Locks should be PAS 24:2022 certified with multi-point espagnolette gearing and an anti-lift bar; both leaves of a french door pair should be individually shootbolted top and bottom.",
+      "Glass spec matters more on doors than on any other opening. A 28mm A-rated argon-filled unit is the baseline; upgrade to laminated inner panes if you're on a ground floor within 800mm of the floor level (a Part K safety requirement) and add solar-control coating if the doors face south or west - a properly specified low-solar-gain coating cuts summer overheating in a south-facing lounge by 30-40% without visibly tinting the glass."
+    ],
+    "hubTips": [
+      "Level-access thresholds (15mm) are worth the £120-£180 upfront - they future-proof for accessibility and clean lines look premium against a paved patio.",
+      "Ask which leaf is the master and which the slave on a french door pair - the master leaf carries the lock, the slave carries shoot-bolts. Both should be independently securable when you leave one closed and one open.",
+      "For sliding patio doors above 2.5m wide, look at aluminium rather than UPVC - the slimmer profile means more glass, and the tracks handle the leaf weight better over 15+ years.",
+      "Get the glass spec for both privacy AND overheating on south/west facing doors - solar control on 28mm A-rated units is a £40-£70 per m² upgrade that pays for itself in comfort inside two summers."
+    ],
+    "commonSpecs": "French door standard spec: 70mm reinforced UPVC or thermally-broken aluminium frame, PAS 24:2022 certification, multi-point locking on master leaf + top and bottom shoot-bolts on slave, 28mm A-rated sealed unit with laminated inner (Part K compliant below 800mm), 15mm low-profile threshold, anti-lift bar, hinge bolts, 10-year cylinder guarantee."
+  },
+  "bay-windows": {
+    "hubIntro": "Front bay windows are structural, not decorative - which is what separates a proper £2,800 bay replacement from a £1,200 quote that ends in cracked plaster and a sagging bay roof six months later. The bay frame carries load from the wall above (often a two-storey bay carrying a bedroom and a small pitched roof) and any replacement has to preserve or replace that structural role. Three or five panel bays on 1930s semis are by far the most common configuration in UK housing stock, and where most of the price variation lives.",
+    "hubBody": [
+      "A like-for-like three-panel UPVC bay on a typical semi runs £1,600-£2,400 fitted, including a new structural bay pole (a steel or aluminium column disguised inside the frame corners that carries the load the old timber bay carried), fresh cills, and reinstatement of internal plaster and external render bands. A five-panel splayed bay on a bigger Edwardian semi is £2,800-£3,800. If the existing bay roof is tiled or leaded and needs stripping and re-covering, add £600-£1,400 for that trade separately.",
+      "The failure mode on cheap bay replacements is missing bay poles. An installer who removes the original frame without a proper structural jack and column above the new frame will initially get away with it - until the wall above settles onto the new (weaker) frame and starts cracking at the corners. Any bay window quote should explicitly say 'structural bay pole to load-bearing corners' on the specification. If the surveyor doesn't measure the wall above, ask them why."
+    ],
+    "hubTips": [
+      "The word you're checking for on the quote is 'bay pole' or 'structural post' - not just 'reinforced frame'. Bay poles carry load; reinforced frames just don't sag.",
+      "On a two-storey bay with brickwork or render above, ask specifically about propping during installation - the wall above needs to be jacked up before the old frame comes out.",
+      "Get the bay roof surveyed at the same time - if the existing lead flashing or felt is more than 20 years old, replacing it during the window fit is a fraction of the price of coming back separately.",
+      "Splayed (angled) bays are more expensive to fabricate than square bays because each corner post is a bespoke angle - if you have a square bay, don't let an installer 'upgrade' you to splayed for no reason."
+    ],
+    "commonSpecs": "Bay window standard spec: 70mm UPVC reinforced sections, structural bay poles at each corner (steel core or heavy aluminium), 28mm A-rated glass with argon fill, new internal cill and external drip cill, matched foil colours front/back if applicable, made-good plaster and render on completion, 10-year guarantee, FENSA certificate."
+  },
+  "secondary-glazing": {
+    "hubIntro": "Secondary glazing is a separate internal window fitted inside your existing primary window, and it's the compliant answer to a set of problems that regular replacement can't solve: listed buildings, Grade II* fronts, conservation areas with strict Article 4 controls, and mid-terraces on busy main roads where noise is the bigger issue than thermal loss. Because it doesn't touch the primary window, it doesn't need Listed Building Consent in the vast majority of cases - a genuine 'yes' where the answer would otherwise be a slow, expensive planning nightmare.",
+    "hubBody": [
+      "Prices depend on the frame material (aluminium is standard, timber is available for internal aesthetic match on period rooms), the opening style (fixed, horizontal slider, lift-out, vertical sash to match a Georgian primary), and the glass. A typical aluminium horizontal slider on a 1.2m x 1.2m opening is £350-£550 fitted; upgrade to 6.8mm acoustic laminated glass (the meaningful noise-reduction spec) and you're at £550-£800; a bespoke timber vertical sash pair to match a Georgian window inside a Grade II listed drawing room can run £950-£1,600.",
+      "Two performance numbers matter. For thermal: a well-fitted secondary system delivers a whole-window U-value around 1.6-1.9 W/m²K when installed inside a single-glazed sash, versus 4.8 for the original alone - not as good as a modern A-rated unit, but a step change nonetheless. For acoustic: secondary glazing outperforms most double glazing on traffic noise because the wide (usually 100-200mm) air gap and different pane thicknesses break up the resonance frequencies that thin sealed units don't. Achieving 40-45 dB reduction is realistic with 6.8mm laminated glass and a 150mm+ cavity - the difference between an unusable front bedroom on a busy A-road and a genuinely quiet one."
+    ],
+    "hubTips": [
+      "Confirm with your council in writing whether secondary glazing needs Listed Building Consent for your property - the general answer is no, but a handful of authorities disagree for Grade I and some Grade II*.",
+      "For real noise reduction, insist on 6.8mm acoustic laminated glass (a PVB interlayer between two 3mm panes) and the biggest cavity your reveal will take - the acoustic laminated glass is the single biggest lever, followed by cavity depth.",
+      "Ask for magnetic seals or brush seals rated for the cavity depth - a system that whistles when it's windy has been under-specified on seals.",
+      "Choose lift-out or hinged openers on ground-floor windows for cleaning and emergency escape (Approved Document B) - fixed panels are only acceptable when the primary window can still be opened for escape."
+    ],
+    "commonSpecs": "Secondary glazing standard spec: aluminium frame powder-coated to match interior joinery colour, minimum 100mm cavity from primary window, 6mm toughened or 6.8mm acoustic laminated glass, magnetic or brush perimeter seals, horizontal slider or lift-out openers, discrete telescopic prop on lift-outs, 10-year system guarantee. Compliant on listed buildings without consent in most authorities - confirm locally."
   }
 }
